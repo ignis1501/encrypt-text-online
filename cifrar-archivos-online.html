@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Cifrar archivos online de forma segura | Encriptación local en el
+      navegador
+    </title>
+
+    <meta
+      name="description"
+      content="Cifra archivos online de forma segura directamente en tu navegador. Encriptación local con AES-GCM, sin subir documentos a servidores. Ideal para proteger PDF, DOCX, TXT y otros archivos sensibles."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://ignis1501.github.io/encrypt-text-online/cifrar-archivos-online.html"
+    />
+
+    <!-- Precarrega de font-->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Cifrar archivos online de forma segura"
+    />
+    <meta
+      property="og:description"
+      content="Guía para cifrar archivos online directamente en el navegador con encriptación local AES-GCM. Sin subir documentos a servidores."
+    />
+    <meta
+      property="og:url"
+      content="https://ignis1501.github.io/encrypt-text-online/cifrar-archivos-online.html"
+    />
+    <meta
+      property="og:image"
+      content="https://ignis1501.github.io/encrypt-text-online/screenshots/cifrar-archivos-online-1.webp"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cifrar archivos online sin subir documentos"
+    />
+    <meta
+      name="twitter:description"
+      content="Aprende a cifrar archivos online de forma segura con encriptación local en el navegador."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ignis1501.github.io/encrypt-text-online/screenshots/cifrar-archivos-online-1.webp"
+    />
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo cifrar archivos online de forma segura?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para cifrar archivos online de forma segura, utiliza una herramienta que realice la encriptación localmente en tu navegador, sin subir los documentos a servidores. Selecciona el archivo, introduce una clave de cifrado y genera un archivo cifrado que puedas guardar o compartir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se suben mis archivos a algún servidor al cifrarlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En esta herramienta, no. Todo el proceso de cifrado y descifrado de archivos se realiza en tu navegador mediante la WebCrypto API. Los documentos no se envían ni se almacenan en servidores externos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué tipos de archivos puedo cifrar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes cifrar archivos de texto como TXT, PDF, DOCX y ODT. El archivo cifrado se guarda en formato .enc.json, que podrás descifrar posteriormente con la misma herramienta y la misma clave."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué algoritmo se utiliza para cifrar los archivos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los archivos se cifran con AES-GCM, un algoritmo moderno y seguro ampliamente utilizado en navegadores y aplicaciones de seguridad. Todo el cifrado se realiza localmente mediante la WebCrypto API."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo cifrar textos sensibles también?<",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si quieres cifrar texto, visita nuestra guía en https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style></style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="breadcrumbs">
+        <a href="https://ignis1501.github.io/encrypt-text-online/">Inicio</a>
+        <span> / </span>
+        <span>Cifrar archivos online</span>
+      </div>
+
+      <h1>Cifrar archivos online de forma segura</h1>
+      <p>
+        En esta página aprenderás cómo
+        <strong>cifrar archivos online directamente en tu navegador</strong>,
+        sin subir documentos a servidores y manteniendo el control total sobre
+        tu información. Ideal para proteger PDF, DOCX, TXT, ODT y otros archivos
+        sensibles.
+      </p>
+      <a href="https://ignis1501.github.io/encrypt-text-online/app" class="cta">
+        Abrir herramienta para cifrar archivos
+      </a>
+      <p>
+        También puedes visitar la
+        <a
+          href="https://ignis1501.github.io/encrypt-text-online/"
+          class="cta-secondary"
+        >
+          página principal del cifrador
+        </a>
+        o la guía para
+        <a
+          href="https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html"
+          class="cta-secondary"
+        >
+          cifrar texto online </a
+        >.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>¿Qué significa cifrar archivos online?</h2>
+        <p>
+          Cifrar archivos online consiste en transformar un documento legible
+          (por ejemplo, un PDF o un DOCX) en un archivo ilegible mediante un
+          algoritmo de encriptación y una clave. Solo quien tenga la clave
+          correcta podrá descifrarlo y recuperar el contenido original.
+        </p>
+        <p>
+          La diferencia clave de esta herramienta es que
+          <strong
+            >todo el cifrado de archivos se realiza localmente en tu
+            navegador</strong
+          >. Los documentos que seleccionas nunca se suben a servidores
+          externos.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cómo cifrar archivos online paso a paso</h2>
+        <p>
+          A continuación tienes una guía rápida para cifrar archivos usando la
+          aplicación web:
+        </p>
+        <ol>
+          <li>
+            Abre la herramienta:
+            <a
+              href="https://ignis1501.github.io/encrypt-text-online/app"
+              class="cta-secondary"
+              >abrir cifrador de archivos</a
+            >.
+          </li>
+          <li>
+            Selecciona la opción de <strong>cifrar archivos</strong> dentro de
+            la aplicación.
+          </li>
+          <li>
+            Elige el archivo que quieres cifrar (por ejemplo, un
+            <strong>PDF, DOCX, TXT u ODT</strong>).
+          </li>
+          <li>
+            Introduce una <strong>clave de cifrado</strong> segura que solo tú y
+            la persona destinataria conozcáis.
+          </li>
+          <li>
+            Haz clic en el botón de <strong>cifrar</strong> para generar el
+            archivo cifrado.
+          </li>
+          <li>
+            Descarga el archivo cifrado en formato <code>.enc.json</code> y
+            guárdalo donde prefieras.
+          </li>
+        </ol>
+        <p>
+          Más adelante, cuando quieras recuperar el contenido original, podrás
+          cargar el archivo <code>.enc.json</code> en la misma herramienta,
+          introducir la misma clave y pulsar <strong>descifrar</strong>.
+        </p>
+
+        <div class="screenshot">
+          <img
+            src="./screenshots/cifrar-archivo-1.webp"
+            alt="Interfaz de la herramienta para cifrar archivos online"
+            width="1200"
+            height="700"
+          />
+          <img
+            src="./screenshots/cifrar-archivo-2.webp"
+            alt="Interfaz de la herramienta para cifrar archivos online"
+            width="1200"
+            height="700"
+          />
+          <p>
+            Ejemplo de interfaz para cifrar archivos online en el navegador.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>¿Qué tipos de archivos puedes cifrar?</h2>
+        <p>
+          La herramienta está pensada para cifrar principalmente
+          <strong>archivos de texto y documentos</strong>, como:
+        </p>
+        <ul>
+          <li>Archivos de texto plano <strong>TXT</strong>.</li>
+          <li>Documentos <strong>PDF</strong>.</li>
+          <li>Documentos de Word <strong>DOCX</strong>.</li>
+          <li>Documentos de texto <strong>ODT</strong>.</li>
+        </ul>
+        <p>
+          El resultado es un archivo cifrado en formato
+          <code>.enc.json</code>, que contiene los datos encriptados y la
+          información necesaria para poder descifrarlos posteriormente con la
+          misma herramienta.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ventajas de cifrar archivos online en el navegador</h2>
+        <ul>
+          <li>
+            <strong>Privacidad total:</strong> los archivos no se suben a
+            servidores.
+          </li>
+          <li>
+            <strong>Sin instalación:</strong> funciona directamente en el
+            navegador.
+          </li>
+          <li>
+            <strong>Ideal para documentos sensibles:</strong> contratos,
+            informes, notas privadas, etc.
+          </li>
+          <li>
+            <strong>Control de la clave:</strong> tú decides cómo compartir la
+            clave de cifrado.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔐 ¿Qué algoritmo se usa para cifrar los archivos?</h2>
+        <p>
+          Los archivos se cifran con <strong>AES-GCM</strong>, un algoritmo de
+          cifrado moderno y seguro ampliamente utilizado en navegadores,
+          aplicaciones de mensajería y sistemas de almacenamiento.
+        </p>
+        <p>
+          El cifrado se realiza mediante la
+          <strong>WebCrypto API</strong>, la API nativa de seguridad del
+          navegador. Esto significa que:
+        </p>
+        <ul>
+          <li>
+            Todo el proceso de cifrado y descifrado ocurre
+            <strong>localmente en tu dispositivo</strong>.
+          </li>
+          <li>
+            Los archivos <strong>no se envían a servidores externos</strong>.
+          </li>
+          <li>
+            La clave de cifrado <strong>nunca abandona tu navegador</strong>.
+          </li>
+        </ul>
+        <p>
+          La clave se deriva a partir de tu contraseña mediante funciones
+          criptográficas seguras, lo que añade una capa adicional de protección
+          frente a ataques de fuerza bruta.
+        </p>
+      </section>
+
+      <section>
+        <h2>Buenas prácticas al cifrar archivos online</h2>
+        <p>
+          Aunque la herramienta realiza el cifrado de forma local, es importante
+          seguir algunas buenas prácticas de seguridad:
+        </p>
+        <ul>
+          <li>
+            Usa una <strong>clave de cifrado robusta</strong>, difícil de
+            adivinar.
+          </li>
+          <li>
+            No compartas la clave por el mismo canal donde envías el archivo
+            cifrado.
+          </li>
+          <li>
+            Evita cifrar archivos en dispositivos o redes que no sean de
+            confianza.
+          </li>
+          <li>
+            Haz copias de seguridad de los archivos cifrados si son muy
+            importantes.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Preguntas frecuentes sobre cifrar archivos online</h2>
+
+        <h3>¿Se suben mis archivos a algún servidor al cifrarlos?</h3>
+        <p>
+          No. En esta herramienta, todo el proceso de cifrado y descifrado de
+          archivos se realiza en tu navegador mediante la WebCrypto API. Los
+          documentos no se envían ni se almacenan en servidores externos.
+        </p>
+
+        <h3>¿Qué pasa si pierdo la clave de cifrado?</h3>
+        <p>
+          Si pierdes la clave de cifrado, no podrás recuperar el contenido del
+          archivo. Por seguridad, la herramienta no guarda ni puede recuperar tu
+          clave. Es importante que la almacenes en un lugar seguro.
+        </p>
+
+        <h3>¿Puedo usarlo para archivos muy sensibles?</h3>
+        <p>
+          Sí, siempre que combines el uso de la herramienta con buenas prácticas
+          de seguridad: clave robusta, dispositivo de confianza y canales
+          seguros para compartir la clave.
+        </p>
+
+        <h3>¿Necesito instalar algo?</h3>
+        <p>
+          No. Solo necesitas un navegador moderno. La herramienta funciona
+          directamente desde la web, sin instalaciones ni extensiones.
+        </p>
+
+        <h3>¿Puedo cifrar textos sensibles también?</h3>
+        <p>
+          Si quieres cifrar texto, visita nuestra guía en
+          <a
+            href="https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html"
+            class="cta-secondary"
+            >cifrar textos online</a
+          >.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cifrar archivos online ahora</h2>
+        <p>
+          Si quieres empezar a cifrar archivos online de forma segura, puedes
+          usar la herramienta gratuita disponible en este proyecto:
+        </p>
+        <a
+          href="https://ignis1501.github.io/encrypt-text-online/app"
+          class="cta"
+        >
+          Abrir herramienta para cifrar archivos
+        </a>
+        <div class="internal-links">
+          <p>También puedes:</p>
+          <ul>
+            <li>
+              Visitar la
+              <a href="https://ignis1501.github.io/encrypt-text-online/">
+                página principal del cifrador
+              </a>
+              para ver todas las funciones.
+            </li>
+            <li>
+              Consultar la guía para
+              <a
+                href="https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html"
+              >
+                cifrar texto online
+              </a>
+              si solo necesitas trabajar con texto.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Cifrador de Texto Online · Cifrar archivos online con
+        encriptación local en el navegador · ignis1501
+      </p>
+    </footer>
+  </body>
+</html>

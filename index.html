@@ -1,24 +1,41 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <script src="https://cdn.counter.dev/script.js" data-id="7a64422d-f223-4c77-ba11-68b43a05a9c6" data-utcoffset="2"></script>
+    <script
+      src="https://cdn.counter.dev/script.js"
+      data-id="7a64422d-f223-4c77-ba11-68b43a05a9c6"
+      data-utcoffset="2"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" type="image/webp" href="/icona.webp" />
+    <link rel="icon" type="image/webp" href="/icona.webp" />
 
     <title>
-      Cifrar y descifrar texto online | Encriptación local en tu navegador
+      Cifrar y descifrar texto y archivos online | Cifrado local en el navegador
     </title>
 
     <meta
       name="description"
-      content="Cifra y descifra texto y archivos directamente en tu navegador. Encriptación segura sin subir datos a servidores. Compatible con TXT, PDF, DOCX y ODT."
+      content="Cifra y descifra texto y archivos online directamente en tu navegador. Encriptación local, sin subir datos a servidores. Ideal para proteger notas, contraseñas y documentos sensibles."
     />
+
+    <link rel="stylesheet" href="style.css" />
 
     <meta name="robots" content="index, follow" />
     <link
       rel="canonical"
       href="https://ignis1501.github.io/encrypt-text-online/"
+    />
+
+    <!-- Precarrega de font-->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
     />
 
     <!-- Open Graph -->
@@ -29,22 +46,30 @@
     />
     <meta
       property="og:description"
-      content="Herramienta de cifrado y descifrado local en el navegador. Tus datos nunca salen de tu dispositivo."
+      content="Herramienta gratuita para cifrar y descifrar texto y archivos directamente en tu navegador. Tus datos nunca salen de tu dispositivo."
     />
     <meta
       property="og:url"
       content="https://ignis1501.github.io/encrypt-text-online/"
+    />
+    <meta
+      property="og:image"
+      content="https://ignis1501.github.io/encrypt-text-online/app/assets/xifratge_tarjeta.webp"
     />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
-      content="Cifrar texto online sin subir archivos"
+      content="Cifrar texto y archivos online sin subir datos."
     />
     <meta
       name="twitter:description"
-      content="Encriptación local de texto y archivos directamente en tu navegador."
+      content="Encriptación local de texto y archivos directamente en tu navegador. Privacidad total."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ignis1501.github.io/encrypt-text-online/app/assets/xifratge_tarjeta.webp"
     />
 
     <!-- Schema.org -->
@@ -52,11 +77,11 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Cifrador de Texto Online",
+        "name": "Cifrador de texto y archivos online",
         "url": "https://ignis1501.github.io/encrypt-text-online/",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Web",
-        "description": "Landing page informativa sobre nuestra aplicación de cifrado y descifrado de texto y archivos localmente en el navegador. Tus datos nunca salen de tu dispositivo.",
+        "description": "Aplicación web gratuita para cifrar y descifrar texto y archivos directamente en el navegador, sin subir datos a servidores. Ideal para proteger notas, contraseñas y documentos sensibles.",
         "image": "/app/assets/xifratge_tarjeta.webp",
         "offers": {
           "@type": "Offer",
@@ -66,94 +91,114 @@
       }
     </script>
 
-    <style>
-      body {
-        font-family: "Fira Code", monospace;
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-        justify-content: center;
-        padding: 40px 20px;
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Se suben mis archivos o textos a algún servidor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Todo el proceso de cifrado y descifrado se realiza en tu navegador.
+        Tus datos no se envían ni se almacenan en ningún servidor externo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo usarlo para información muy sensible?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La herramienta está pensada para mejorar tu privacidad cifrando texto y
+        archivos de forma local. Aun así, siempre es recomendable seguir buenas
+        prácticas de seguridad y no compartir claves de cifrado de forma
+        insegura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es necesario instalar algo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Es una aplicación web que funciona directamente en el navegador, sin
+        instalaciones ni extensiones adicionales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo cifro un texto online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si quieres cifrar sólo texto, visita nuestra guía en https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo cifro un archivo online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si quieres cifrar documentos, visita nuestra guía en https://ignis1501.github.io/encrypt-text-online/cifrar-archivo-online.html."
+            }
+          }
+        ]
       }
-      header,
-      section,
-      footer {
-        max-width: 1100px;
-        margin: auto;
-        padding: 2rem 1rem;
-      }
-      h1 {
-        font-size: 36px;
-        font-weight: 600;
-        color: #0ce78f;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      h1,
-      h2,
-      h3 {
-        line-height: 1.3;
-        font-weight: 600;
-        color: #0ce78f;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      a.cta {
-        display: inline-block;
-        background: #0a5cff;
-        color: #fff;
-        padding: 0.8rem 1.5rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      ul {
-        padding-left: 1.2rem;
-      }
-	  .contenidorContacte {
-			padding: 1rem 1rem 1rem 1rem;
-			text-align: center;
-			background-color: rgb(50, 53, 50);
-		}
+    </script>
 
-		.iconesContacte img {
-			width: 2rem;
-			height: 2rem;
-		}
+    <style>
+      .contenidorContacte {
+        padding: 1rem 1rem 1rem 1rem;
+        text-align: center;
+        background-color: rgb(50, 53, 50);
+      }
+
+      .iconesContacte img {
+        width: 2rem;
+        height: 2rem;
+      }
     </style>
   </head>
 
   <body>
     <header>
-      <h1>Cifrar y descifrar texto online de forma segura</h1>
+      <h1>Cifrar y descifrar texto y archivos online de forma segura</h1>
       <p>
         Herramienta web para
         <strong>encriptar texto y archivos directamente en tu navegador</strong
-        >, sin subir información a servidores externos.
+        >, sin subir información a servidores externos. Ideal para proteger
+        notas, contraseñas y documentos sensibles.
       </p>
       <a href="https://ignis1501.github.io/encrypt-text-online/app" class="cta"
-        >Acceder al cifrador</a
+        >Abrir herramienta de cifrado</a
       >
     </header>
 
     <section>
       <h2>🔒 Encriptación local en tu navegador</h2>
       <p>
-        Nuestra aplicación de cifrado funciona completamente en el navegador.
+        Toda la encriptación se realiza de forma local en tu dispositivo.
         <strong>Tus textos y archivos nunca se envían a ningún servidor</strong
-        >, garantizando máxima privacidad y seguridad.
+        >, lo que garantiza máxima privacidad y control sobre tu información.
       </p>
     </section>
 
     <section>
-      <h2>✍️ Cifrar texto escrito o archivos</h2>
+      <h2>✍️ Cifrar texto y archivos online</h2>
+      <p>
+        Puedes cifrar tanto texto escrito como archivos de texto de forma
+        sencilla:
+      </p>
       <ul>
-        <li>Cifrado de texto escrito directamente en un textarea</li>
+        <li>Cifrado de texto escrito directamente en un área de texto.</li>
         <li>
           Cifrado de archivos de texto:
-          <strong>TXT, PDF, DOCX y ODT</strong>
+          <strong>TXT, PDF, DOCX y ODT</strong>.
         </li>
-        <li>El resultado cifrado se muestra en pantalla para copiar y pegar</li>
-        <li>Descarga del archivo cifrado en formato <code>.enc.json</code></li>
+        <li>
+          El resultado cifrado se muestra en pantalla para copiar y pegar.
+        </li>
+        <li>Descarga del archivo cifrado en formato <code>.enc.json</code>.</li>
       </ul>
     </section>
 
@@ -168,23 +213,82 @@
     </section>
 
     <section>
-      <h2>💻🔐 Ideal para móvil y escritorio</h2>
+      <h2>💻🔐 Usable en móvil, tablet y escritorio</h2>
       <p>
         Copia el texto cifrado y guárdalo en un bloc de notas, envíalo por
-        mensajería o almacénalo donde quieras. Funciona en móviles, tablets y
-        ordenadores.
+        mensajería o almacénalo donde quieras. La herramienta funciona en
+        móviles, tablets y ordenadores con navegadores modernos.
       </p>
     </section>
 
     <section>
-      <h2>🛡️ ¿Por qué usar nuestro cifrador online?</h2>
+      <h2>🛡️ Ventajas de este cifrador online</h2>
       <ul>
-        <li>No requiere registro</li>
-        <li>No sube documentos a servidores</li>
-        <li>Rápido y ligero</li>
-        <li>Compatible con React y navegadores modernos</li>
-        <li>Orientado a privacidad y control del usuario</li>
+        <li>No requiere registro ni cuenta de usuario.</li>
+        <li>No sube documentos ni textos a servidores.</li>
+        <li>Rápido, ligero y centrado en la privacidad.</li>
+        <li>Cifrado local en el navegador, sin instalación.</li>
+        <li>Orientado a usuarios que quieren control total sobre sus datos.</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>🔐 ¿Qué algoritmo se usa para cifrar el texto?</h2>
+      <p>
+        El texto se cifra con AES‑GCM, un algoritmo moderno que ofrece
+        confidencialidad e integridad.
+      </p>
+      <p>
+        La clave se deriva a partir de tu contraseña mediante funciones
+        criptográficas seguras de la WebCrypto API.
+      </p>
+      <p>
+        Todo ocurre en tu navegador: ni el texto ni la clave se envían a
+        servidores.
+      </p>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes sobre el cifrado online</h2>
+      <h3>¿Se suben mis archivos o textos a algún servidor?</h3>
+      <p>
+        No. Todo el proceso de cifrado y descifrado se realiza en tu navegador.
+        Tus datos no se envían ni se almacenan en ningún servidor externo.
+      </p>
+
+      <h3>¿Puedo usarlo para información muy sensible?</h3>
+      <p>
+        La herramienta está pensada para mejorar tu privacidad cifrando texto y
+        archivos de forma local. Aun así, siempre es recomendable seguir buenas
+        prácticas de seguridad y no compartir claves de cifrado de forma
+        insegura.
+      </p>
+
+      <h3>¿Es necesario instalar algo?</h3>
+      <p>
+        No. Es una aplicación web que funciona directamente en el navegador, sin
+        instalaciones ni extensiones adicionales.
+      </p>
+
+      <h3>¿Cómo cifro un texto online?</h3>
+      <p>
+        Si quieres cifrar sólo texto, visita nuestra guía en
+        <a
+          href="https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html"
+          class="cta-secondary"
+          >cifrar textos online</a
+        >.
+      </p>
+
+      <h3>¿Cómo cifro un archivo online?</h3>
+      <p>
+        Si quieres cifrar documentos, visita nuestra guía en
+        <a
+          href="https://ignis1501.github.io/encrypt-text-online/cifrar-archivo-online.html"
+          class="cta-secondary"
+          >cifrar archivos online</a
+        >.
+      </p>
     </section>
 
     <section>
@@ -194,7 +298,7 @@
         cifrado y descifrado local.
       </p>
       <a href="https://ignis1501.github.io/encrypt-text-online/app" class="cta"
-        >Ir al aplicativo</a
+        >Ir a la aplicación de cifrado</a
       >
     </section>
 
@@ -203,18 +307,20 @@
         © 2026 Cifrador de Texto Online · Encriptación segura en el navegador ·
         ignis1501
       </p>
-	  <div class="contenidorContacte">
-          <p>Abierto a propuestas comerciales</p>
-          <p>Puedes contactarme a través de: </p>
-          <div class="iconesContacte">
-            <a href="https://www.linkedin.com/in/ignacio-garcia-martinez-736813b5/">
-              <img src="/linkedin.webp" alt="linkedin"></img>
-            </a>
-            <a href="https://github.com/ignis1501/">
-              <img src="/git.webp" alt="github"></img>
-            </a>
-          </div>
+      <div class="contenidorContacte">
+        <p>Abierto a propuestas comerciales</p>
+        <p>Puedes contactarme a través de:</p>
+        <div class="iconesContacte">
+          <a
+            href="https://www.linkedin.com/in/ignacio-garcia-martinez-736813b5/"
+          >
+            <img src="/linkedin.webp" alt="linkedin" />
+          </a>
+          <a href="https://github.com/ignis1501/">
+            <img src="/git.webp" alt="github" />
+          </a>
         </div>
+      </div>
     </footer>
   </body>
 </html>

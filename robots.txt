@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Evitar que Google rastree archivos del build que no aportan nada
+Disallow: /assets/*.map
+Disallow: /*.map
+
+# Sitemap principal
+Sitemap: https://ignis1501.github.io/encrypt-text-online/sitemap.xml
