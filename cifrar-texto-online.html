@@ -68,53 +68,93 @@
 
     <!-- Schema.org FAQ -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Cómo cifrar texto online de forma segura?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Para cifrar texto online de forma segura, utiliza una herramienta que realice la encriptación localmente en tu navegador, sin subir los datos a servidores. Escribe o pega el texto, introduce una clave de cifrado y genera el texto cifrado para compartirlo o guardarlo."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Se sube mi texto a algún servidor al cifrarlo?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "En esta herramienta, no. Todo el proceso de cifrado y descifrado se realiza en tu navegador. El texto no se envía ni se almacena en servidores externos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Es seguro cifrar texto online?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Es seguro siempre que la encriptación se haga de forma local en tu dispositivo y que protejas bien la clave de cifrado. Esta herramienta está diseñada para que tus datos no salgan de tu navegador."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Necesito instalar algo para cifrar texto online?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Solo necesitas un navegador moderno. La herramienta funciona directamente desde la web, sin instalaciones ni extensiones."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Puedo cifrar archivos también?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Si quieres cifrar documentos, visita nuestra guía en https://ignis1501.github.io/encrypt-text-online/cifrar-archivos-online.html ."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://ignis1501.github.io/encrypt-text-online/cifrar-textos-online.html#faq",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ignis1501.github.io/encrypt-text-online/cifrar-textos-online.html"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Encrypt Text Online",
+    "url": "https://ignis1501.github.io/encrypt-text-online/"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Cifrado de texto" },
+    { "@type": "Thing", "name": "Seguridad digital" },
+    { "@type": "Thing", "name": "Protección de datos" },
+    { "@type": "Thing", "name": "Privacidad online" }
+  ],
+  "keywords": [
+    "cifrar texto online",
+    "cifrado AES-GCM",
+    "proteger texto sensible",
+    "cifrado en el navegador",
+    "WebCrypto API",
+    "seguridad digital"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Encrypt Text Online",
+    "url": "https://ignis1501.github.io/encrypt-text-online/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ignis1501.github.io/encrypt-text-online/app/assets/xifratge_tarjeta.webp"
+    }
+  },
+  "relatedLink": [
+    "https://ignis1501.github.io/encrypt-text-online/cifrar-archivos-online.html",
+    "https://ignis1501.github.io/encrypt-text-online/proteger-archivos-personales.html",
+    "https://ignis1501.github.io/encrypt-text-online/guia-de-seguridad-para-principiantes.html",
+    "https://ignis1501.github.io/encrypt-text-online/guia-de-privacidad-digital.html"
+  ],
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo cifrar texto online de forma segura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para cifrar texto online de forma segura, utiliza una herramienta que realice la encriptación localmente en tu navegador mediante la WebCrypto API. Escribe o pega el texto, introduce una clave de cifrado y genera el texto cifrado sin subir datos a servidores."
       }
-    </script>
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se sube mi texto a algún servidor al cifrarlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Todo el proceso de cifrado y descifrado se realiza localmente en tu navegador. El texto nunca se envía ni se almacena en servidores externos, garantizando privacidad total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es seguro cifrar texto online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, siempre que la encriptación se realice localmente en tu dispositivo y protejas adecuadamente la clave de cifrado. Esta herramienta está diseñada para que tus datos no salgan de tu navegador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito instalar algo para cifrar texto online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Solo necesitas un navegador moderno. La herramienta funciona directamente desde la web sin instalaciones, extensiones ni descargas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cifrar archivos también?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Si deseas cifrar documentos en lugar de texto, visita https://ignis1501.github.io/encrypt-text-online/cifrar-archivos-online.html"
+      }
+    }
+  ]
+}
+</script>
+
 
     <style></style>
   </head>
@@ -363,6 +403,17 @@
           </ul>
         </div>
       </section>
+
+      <section class="related-links">
+        <h2>También te puede interesar</h2>
+        <ul>
+          <li><a href="/encrypt-text-online/cifrar-archivos.html" class="cta-secondary">Cifrar archivos online</a></li>
+          <li><a href="/encrypt-text-online/proteger-archivos-personales.html" class="cta-secondary">Proteger archivos personales</a></li>
+          <li><a href="/encrypt-text-online/guia-de-seguridad-para-principiantes.html" class="cta-secondary">Guía de seguridad para principiantes</a></li>
+          <li><a href="/encrypt-text-online/compartir-contrasenas-seguras.html" class="cta-secondary">Cómo compartir contraseñas de forma segura</a></li>
+        </ul>
+      </section>
+
     </main>
 
     <footer>
