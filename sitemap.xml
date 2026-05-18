@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Página principal -->
   <url>
     <loc>https://ignis1501.github.io/encrypt-text-online/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
 
+  <!-- Herramienta principal (React) -->
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/app/</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Tutoriales -->
   <url>
     <loc>https://ignis1501.github.io/encrypt-text-online/cifrar-texto-online.html</loc>
     <priority>0.9</priority>
@@ -19,9 +28,71 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <!-- Guías informativas principales -->
   <url>
-    <loc>https://ignis1501.github.io/encrypt-text-online/app/</loc>
-    <priority>0.6</priority>
+    <loc>https://ignis1501.github.io/encrypt-text-online/como-crear-contrasenas-seguras.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/entropia-de-contrasenas.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/guia-de-privacidad-digital.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/guia-de-seguridad-para-principiantes.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Nuevas páginas long-tail -->
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/proteger-archivos-personales.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/guardar-contrasenas-seguras.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/errores-comunes-al-crear-contrasenas.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/como-saber-si-una-contrasena-es-segura.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/como-proteger-tu-movil-si-te-lo-roban.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/como-compartir-contrasenas-de-forma-segura.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://ignis1501.github.io/encrypt-text-online/seguridad-digital-basica-para-tu-familia.html</loc>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 

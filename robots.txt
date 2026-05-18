@@ -1,9 +1,46 @@
 User-agent: *
 Allow: /
 
-# Evitar que Google rastree archivos del build que no aportan nada
-Disallow: /assets/*.map
-Disallow: /*.map
+# --- Bloqueo de archivos innecesarios para SEO ---
+# Archivos de build, mapas de código, configuraciones, logs, etc.
+Disallow: /*.map$
+Disallow: /*.json$
+Disallow: /*.lock$
+Disallow: /*.md$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+Disallow: /*.config$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /*.scss$
+Disallow: /*.sass$
+Disallow: /*.less$
 
-# Sitemap principal
+# --- Bloqueo de carpetas internas típicas de proyectos web ---
+# (GitHub Pages no siempre las expone, pero si algún día se suben por error, quedan protegidas)
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /build/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /__tests__/
+Disallow: /coverage/
+
+# --- Bloqueo de assets que no aportan nada al SEO ---
+# (Imágenes sí se permiten, pero no assets técnicos)
+Disallow: /assets/*.map$
+Disallow: /assets/*.json$
+Disallow: /assets/*.md$
+Disallow: /assets/*.lock$
+
+# --- Evitar indexación de archivos de proyecto ---
+Disallow: /*package.json$
+Disallow: /*package-lock.json$
+Disallow: /*tsconfig.json$
+Disallow: /*vite.config.js$
+Disallow: /*webpack.config.js$
+
+# --- Sitemap principal ---
 Sitemap: https://ignis1501.github.io/encrypt-text-online/sitemap.xml
