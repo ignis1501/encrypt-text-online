@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <script
+      src="https://cdn.counter.dev/script.js"
+      data-id="7a64422d-f223-4c77-ba11-68b43a05a9c6"
+      data-utcoffset="2"
+    ></script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Entropía de contraseñas — Qué es y cómo medir la seguridad real de una
+      clave
+    </title>
+
+    <meta
+      name="description"
+      content="Aprende qué es la entropía de una contraseña, cómo se calcula y por qué determina la seguridad real de tus claves. Guía completa para crear contraseñas imposibles de romper."
+    />
+
+    <meta
+      property="og:title"
+      content="Entropía de contraseñas — Guía completa"
+    />
+    <meta
+      property="og:description"
+      content="Descubre cómo medir la fortaleza real de una contraseña mediante entropía y cómo crear claves seguras."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://ignis1501.github.io/encrypt-text-online/entropia-de-contrasenas.html"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Entropía de contraseñas — Guía completa"
+    />
+    <meta
+      name="twitter:description"
+      content="Descubre cómo medir la fortaleza real de una contraseña mediante entropía y cómo crear claves seguras."
+    />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Entropía de contraseñas",
+        "description": "Guía completa sobre entropía de contraseñas, cómo se calcula y cómo determina la seguridad real de una clave.",
+        "author": {
+          "@type": "Organization",
+          "name": "Encrypt Text Online"
+        },
+        "url": "https://ignis1501.github.io/encrypt-text-online/entropia-de-contrasenas.html"
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="breadcrumbs">
+        <a href="index.html">Inicio</a> <span>›</span>
+        <span>Entropía de contraseñas</span>
+      </nav>
+      <h1>Entropía de contraseñas</h1>
+      <p class="hero">
+        La entropía es la medida matemática que determina cuán difícil es romper
+        una contraseña. Si quieres proteger tus datos o cifrar archivos con
+        seguridad real, necesitas entender este concepto.
+      </p>
+    </header>
+
+    <section>
+      <h2>¿Qué es la entropía?</h2>
+      <p>
+        La entropía mide la <strong>incertidumbre</strong> o
+        <strong>aleatoriedad</strong> de una contraseña. Cuanta más entropía
+        tenga una clave, más difícil será adivinarla mediante fuerza bruta.
+      </p>
+      <p>
+        Se mide en <strong>bits</strong>. A mayor número de bits, mayor
+        seguridad.
+      </p>
+    </section>
+
+    <section>
+      <h2>Cómo se calcula la entropía</h2>
+      <p>La fórmula básica es:</p>
+
+      <p><code>Entropía = log2(N^L)</code></p>
+
+      <ul>
+        <li><strong>N</strong> = número de símbolos posibles</li>
+        <li><strong>L</strong> = longitud de la contraseña</li>
+      </ul>
+
+      <p>Ejemplos:</p>
+
+      <ul>
+        <li>Solo letras minúsculas → 26 símbolos</li>
+        <li>Minúsculas + mayúsculas → 52 símbolos</li>
+        <li>+ números → 62 símbolos</li>
+        <li>+ símbolos → 90+ símbolos</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ejemplos reales de entropía</h2>
+
+      <p>
+        <strong>Contraseña:</strong> <code>juan1234</code><br />
+        Entropía aproximada: 20 bits → <strong>muy débil</strong>
+      </p>
+
+      <p>
+        <strong>Contraseña:</strong> <code>CaféFríoEnInvierno!2024</code><br />
+        Entropía aproximada: 90+ bits → <strong>extremadamente fuerte</strong>
+      </p>
+
+      <p>
+        A partir de 80 bits, una contraseña es considerada
+        <strong>prácticamente irrompible</strong> con tecnología actual.
+      </p>
+    </section>
+
+    <section>
+      <h2>Relación entre entropía y cifrado AES‑256</h2>
+      <p>
+        AES‑256 es un cifrado extremadamente seguro, pero su fortaleza depende
+        de la calidad de la clave que uses.
+      </p>
+      <p>
+        Si tu contraseña tiene baja entropía, un atacante puede intentar
+        romperla por fuerza bruta. Si tiene alta entropía, el cifrado es
+        prácticamente imposible de vulnerar.
+      </p>
+
+      <a class="cta" href="cifrar-texto-online.html"
+        >Cifrar texto con contraseña fuerte</a
+      ><br />
+      <a class="cta" href="cifrar-archivos-online.html"
+        >Cifrar archivos con AES‑256</a
+      ><br />
+      <a class="cta" href="app/"
+        >Usar la herramienta avanzada de cifrado (React)</a
+      >
+    </section>
+
+    <footer>
+      © 2026 Cifrador de Texto Online · Cifrar archivos online con encriptación
+      local en el navegador · ignis1501
+    </footer>
+  </body>
+</html>
